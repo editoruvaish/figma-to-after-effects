@@ -46,6 +46,11 @@ for name in sorted(os.listdir(base)):
         io.open(p, "w", encoding="utf-8").write(out)
 PY
 
+# Clear last run's logs so a run that never reached AE cannot print a stale
+# RESULT=built from the previous one.
+rm -f "${D}run.log"
+[ -n "$2" ] && rm -f "${D}$2"
+
 osascript -e "tell application \"$APP\" to DoScriptFile \"${D}run.jsx\"" >/dev/null 2>&1 || true
 
 echo "--- run.log ---"

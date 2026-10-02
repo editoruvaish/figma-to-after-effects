@@ -1,0 +1,6 @@
+# Per-run output from the figma-to-after-effects skill scripts
+.claude/skills/figma-to-after-effects/scripts/*.log
+.claude/skills/figma-to-after-effects/scripts/probe.txt
+.claude/skills/figma-to-after-effects/scripts/_doctor.*
+.claude/skills/figma-to-after-effects/frames/*.png
+!.claude/skills/figma-to-after-effects/frames/PROJ_S1_sheet.png
